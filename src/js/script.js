@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    prevArrow: "<div id='prev' class='prev-arrow'><img class='img-svg' src='/img/icon/right-arrow.svg'></div>",
-    nextArrow: "<div id='next' class='next-arrow'><img class='img-svg' src='/img/icon/right-arrow.svg'></div>",
+    prevArrow: "<div id='next' class='next-arrow'><img class='img-svg' src='/img/icon/right-arrow.svg'></div>",
+    nextArrow: "<div id='prev' class='prev-arrow'><img class='img-svg' src='/img/icon/right-arrow.svg'></div>",
     responsive: [
       {
         breakpoint: 989,
@@ -43,6 +43,17 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     ]
   });
+
+  function moreImg() {
+    document.querySelector('.gallery__btn').addEventListener('click', () => {
+      document.querySelectorAll('.gallery a').forEach(item => {
+        item.classList.remove('gallery__hide')
+        document.querySelector('.gallery__btn').style.display = "none"
+      })
+      
+    })
+  }
+  moreImg();
 
     // window.onload = function () {
     //   document.body.classList.add('loaded_hiding');
@@ -75,157 +86,25 @@ window.addEventListener('DOMContentLoaded', () => {
   
 });
 
-// function modalShow(btn) {
-//   document.querySelector(`${btn}`).addEventListener('click', () => {
-//     console.log(document.querySelector('.modal'))
-//     document.querySelector('.modal').classList.add('showModal')
-//   })
-// }
+function modalShow(btn) {
+  document.querySelector(`${btn}`).addEventListener('click', () => {
+    console.log(document.querySelector('.modal'))
+    document.querySelector('.modal').classList.add('showModal')
+  })
+}
 
-// modalShow('.booking__btn');
-// modalShow('.program__btn');
-// modalShow('.menu__btn');
+modalShow('.menu__btn');
 
+function modalHide() {
+  document.querySelector('.modal').addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+      document.querySelector('.modal').classList.remove('showModal')
+    }
+  })
+}
 
-// function modalHide() {
-//   document.querySelector('.modal').addEventListener('click', (event) => {
-//     if (event.target.classList.contains('modal')) {
-//       document.querySelector('.modal').classList.remove('showModal')
-//     }
-//   })
-// }
+modalHide();
 
-// modalHide();
-
-
-
-
-
-  // function hideImg() {
-  //   if (window.location.href != "https://www.pracasofar.com.ua/" || window.location.href != "https://www.pracasofar.com.ua/thankyou") {
-  //     document.querySelector('.header').style.cssText = "height: 100%"
-  //   }
-  //   console.log(window.location.href)
-  //   if (window.location.href == "https://www.pracasofar.com.ua/thankyou/") {
-  //     document.querySelector('.header').style.cssText = "height: 100vh"
-  //   }
-  // }
-  // hideImg()
-
-  // function menu() {
-  //   const humburger = document.querySelector('.menu__humburger'),
-  //   menu = document.querySelector('.menu__mobile'),
-  //   close = document.querySelector('.menu__mobile--close');
-  //   document.querySelectorAll('.menu__list--mobile .menu__item a').forEach(item => {
-  //     item.addEventListener('click', () => {
-  //       menu.style.cssText = 'right: -100%'
-  //     })
-  //   })
-  //   humburger.addEventListener('click', () => {
-  //     menu.style.cssText = 'right: 0px'
-  //   })
-  //   close.addEventListener('click', () => {
-  //     menu.style.cssText = 'right: -100%'
-  //   })
-  // }
-  // menu();  
-
-  // function menuNum() {
-  //   document.body.addEventListener('click', (event) => {      
-  //       if (event.target == document.querySelectorAll('.menu__num li a')[0] ||
-  //       event.target == document.querySelectorAll('.menu__num li a')[1] ||
-  //       event.target == document.querySelectorAll('.menu__num li a')[2]
-  //       ) {
-  //         document.querySelectorAll('.menu__num li').forEach((item) => {
-  //           item.classList.add('menu__num--active')
-  //         })
-  //         document.querySelector('.menu__num--tr svg').style.cssText = 'transform: rotate(360deg)'
-  //       } else {
-  //         document.querySelectorAll('.menu__num li').forEach((item) => {
-  //           item.classList.remove('menu__num--active')
-  //         })
-  //         document.querySelector('.menu__num--tr svg').style.cssText = 'transform: rotate(180deg)'
-  //         document.querySelector('.menu__num--first').classList.add('menu__num--active')
-  //       }      
-  //   })
-  // }
-  // menuNum();
-
-  // function modalShow(button, modal, oldModal) {
-  //   document.querySelectorAll(button).forEach(function (item) {
-  //     item.addEventListener('click', function(event) {
-  //       document.querySelector(modal).style.cssText = 'opacity: 1; z-index: 200;';
-  //       if(oldModal) {
-  //         if (this.hasAttribute('data-title-name')) {
-  //           document.querySelector('.modal-content__title').textContent = `${event.target.parentNode.parentNode.parentNode.childNodes[1].textContent}`;
-  //           if (event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1] != undefined) {
-  //             document.querySelector(".modal-content__img--buy img").src = `${event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].getAttribute('src')}`;
-  //           }   
-  //         } else {
-  //           document.querySelector('.modal-content__title').textContent = `${event.target.parentNode.parentNode.childNodes[1].textContent}`;
-  //           if (event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1] != undefined) {
-  //             document.querySelector(".modal-content__img--buy img").src = `${event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].getAttribute('src')}`;
-  //           } 
-  //         }
-  //         document.querySelector(oldModal).style.cssText = 'opacity: 0; z-index: -1;';
-          
-  //       }
-  //       if (modal) {
-  //         if (this.hasAttribute('data-title-name')) {
-  //           let titleStr = event.target.parentNode.parentNode.parentNode.childNodes[1].textContent;
-  //           titleStr = titleStr.trim();
-  //           $('input[name="title"]').val(titleStr);
-            
-  //           let titleCountry = event.target.parentNode.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[1].childNodes[1].childNodes[3].textContent;
-  //           titleCountry = titleCountry.trim();
-  //           $('input[name="country-vacancies"]').val(titleCountry);
-              
-  //         } else {
-  //           let titleStr = event.target.parentNode.parentNode.childNodes[1].textContent;
-  //           titleStr = titleStr.trim();
-  //           $('input[name="title-vacancies"]').val(titleStr);
-            
-  //           let titleCountry = event.target.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[3].textContent;
-  //           titleCountry = titleCountry.trim();
-  //           $('input[name="country-vacancies"]').val(titleCountry);
-  //         }
-  //         // document.querySelectorAll('.modal-block-title').forEach(item => {
-  //         //   let titleStr = item.textContent;
-  //         //   console.log(titleStr)
-  //         //   titleStr = titleStr.trim();
-            
-  //         // })
-  //         console.log(event.target.parentNode.parentNode.childNodes[3].childNodes[3].childNodes[3])
-  //         document.querySelector('.vacancies-list__price').textContent = `${event.target.parentNode.parentNode.childNodes[3].childNodes[3].childNodes[3].textContent}`;
-  //         document.querySelector('.vacancies-list__time').textContent = `${event.target.parentNode.parentNode.childNodes[3].childNodes[5].childNodes[3].textContent}`;
-  //         document.querySelector('.vacancies-list__priceNew').textContent = `${event.target.parentNode.parentNode.childNodes[3].childNodes[7].childNodes[3].textContent}`;
-
-  //         document.querySelector('.vacancies-list__new').textContent = `${event.target.parentNode.parentNode.childNodes[5].textContent}`;
-  //         document.querySelector('.vacancies-list__more').textContent = `${event.target.parentNode.parentNode.childNodes[5].textContent}`;
-  //         document.querySelector('.modal-block__title').textContent = `${event.target.parentNode.parentNode.childNodes[1].textContent}`;
-  //         document.querySelector('.modal-content__buy').dataset.titleName = `${event.target.parentNode.parentNode.childNodes[1].textContent}`;
-  //         if (event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1] != undefined) {
-  //           document.querySelector(".modal-content__img img").src = `${event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].getAttribute('src')}`;
-  //         }
-          
-  //       }
-        
-  //     })
-  //   })
-  // }
-  // modalShow(".vacancies-buttons__info", ".modal--info");
-  // modalShow(".vacancies-buttons__buy", ".modal--buy", '.modal--info');
-
-  // function modalClose(button, modal) {
-  //   document.querySelectorAll(button).forEach(item => {
-  //     item.addEventListener('click', () => {
-  //       document.querySelectorAll(modal).forEach(mod => {
-  //         mod.style.cssText = 'opacity: 0; z-index: -1;';
-  //       })
-  //     })
-  //   })
-  // }
-  // modalClose('.modal-block__close', '.modal')
 
 $(function(){
     $('input[name="phone"]').mask("99 999 9999");
@@ -246,10 +125,9 @@ $(function(){
   "li", "lt", "lu", "mk", "mt", "md", "mc", "me", "nl", "no", "pl", "pt", "ro",
   "ru", "sm", "rs", "sk", "si", "es", "se", "ch", "gb"],
       hiddenInput: "full_phone",
-      initialCountry:"ru",
+      initialCountry:"ua",
       autoHideDialCode: false,
-      separateDialCode: true,
-      preferredCountries: [ "ru", "by", "ua"]
+      separateDialCode: true
       });
       
       // let str = document.querySelector('.iti__selected-flag').getAttribute("title");
@@ -310,39 +188,39 @@ $(function(){
 // }
 
  
-// function scrollDownEvent(item) {
-// 	$(item).on("click","a", function (event) {
-// 		//забираем идентификатор бока с атрибута href
-// 		var id  = $(this).attr('href'),
+function scrollDownEvent(item) {
+	$(item).on("click", function (event) {
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
 			
-// 		//узнаем высоту от начала страницы до блока на который ссылается якорь
-// 		top = $(id).offset().top;
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+		top = $(id).offset().top;
 		
-// 		if(id.includes('http')){
-// 			document.location.href=id;
-// 		}
-//     //отменяем стандартную обработку нажатия по ссылке
-// 		event.preventDefault();
+		if(id.includes('http')){
+			document.location.href=id;
+		}
+    //отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
 		
-// 		//анимируем переход на расстояние - top за 1500 мс
-// 		$('body,html').animate({scrollTop: top}, 1500);
-// 	});
-// };
-// scrollDownEvent('.header .menu__list');
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+};
+scrollDownEvent('a[href*="#"]');
 
-// $('.scroll-down').on("click", function (event) {
-//   //отменяем стандартную обработку нажатия по ссылке
-//   event.preventDefault();
+$('.scroll-down').on("click", function (event) {
+  //отменяем стандартную обработку нажатия по ссылке
+  event.preventDefault();
 
-//   //забираем идентификатор бока с атрибута href
-//   var id  = $(this).attr('href'),
+  //забираем идентификатор бока с атрибута href
+  var id  = $(this).attr('href'),
 
-//   //узнаем высоту от начала страницы до блока на который ссылается якорь
-//     top = $(id).offset().top;
+  //узнаем высоту от начала страницы до блока на который ссылается якорь
+    top = $(id).offset().top;
   
-//   //анимируем переход на расстояние - top за 1500 мс
-//   $('body,html').animate({scrollTop: top}, 1500);
-// });
+  //анимируем переход на расстояние - top за 1500 мс
+  $('body,html').animate({scrollTop: top}, 1500);
+});
 
 
 // $(document).on('click', 'div[class^="vacancies-buttons"]', function(e) {

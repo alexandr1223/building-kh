@@ -1,15 +1,648 @@
-// @media screen and (min-width: 320px) and (max-width: 479px)
-    
+@media screen and (min-width: 320px) and (max-width: 768px)
+    .container
+        width: 100%
+        padding: 0 15px
+    .header
+        height: 600px
+        background: url('../img/bg/mobile-bg.jpg') center center/cover no-repeat
+    .menu
+        padding: 8px 0
+        &__btn
+            font-size: 10px
+            padding: 12px 12px
+        &__logo
+            &--text
+                font-size: 20px
+            img
+                width: 40px
+                height: 40px
+        &__text
+            display: none
+    .call
+        font-size: 14px
+        &__menu
+            margin-bottom: 0
+    .first
+        &__title
+            font-size: 26px
+            margin-top: 40px
+            width: 100%   
+        &__list
+            font-size: 14px
+            li
+                padding: 2px 0
+        &__subtitle
+            font-size: 16px
+            margin-top: 26px
+        &__btn
+            font-size: 14px
+            padding: 12px 40px
+            margin: 20px auto 0
+            width: 200px
+    .price
+        padding-bottom: 20px
+        padding-top: 40px
+        &__title
+            font-size: 24px
+            margin-bottom: 0
+        &__subtitle
+            font-size: 18px
+            margin-top: 25px
+            text-align: center
+        &__list
+            font-size: 13px
+            li
+                padding: 10px 0
+                display: flex
+                justify-content: space-between
+                span
+                    width: 100%
+        &__num
+            width: 160px !important
+            margin-left: 10px
+            text-align: right
+    .gallery
+        grid-gap: 10px
+        grid-template-columns: 1fr
+        padding: 0 20px
+        &__title
+            font-size: 24px
+        a
+            img
+                height: 220px
+        &__text
+            font-size: 11px
+            padding: 8px 10px
+    .review
+        padding: 50px 20px
+        background: transparent
+        &__title
+            font-size: 28px
+            text-align: center
+            color: #3A8ECA
+            margin-left: 0
+        &__item
+            height: 380px
+            margin: 10px 40px
+        &__img
+            img
+                width: 120px
+                height: 120px
+        &__name
+            font-size: 20px
+        &__text
+            font-size: 12px
+        &__slider
+            margin-top: 20px 
+        .next-arrow
+            svg
+                width: 30px
+                left: -10px
+        .prev-arrow
+            svg
+                width: 30px
+                right: -10px
+    .accordion
+        min-height: 450px
+        margin-top: 0
+        &__title
+            font-size: 24px
+            margin-bottom: 35px
+    .set
+        a
+            font-size: 15px
+            padding-right: 60px
+            &:hover
+                svg
+                    width: 40px
+                    height: 40px
+            svg
+                width: 40px
+                height: 40px
+    .contentAcc p
+        font-size: 13px
+        padding-top: 0
+    .send
+        &__title
+            font-size: 24px
+        &__subtitle
+            font-size: 16px
+        &__input
+            font-size: 15px
+            width: 100%
+        &__item
+            flex-direction: column
+        &__form
+            width: 80%
+            max-width: 400px
+        &__btn
+            width: 100%
+            font-size: 14px
+        .iti
+            width: 100%
+            margin-top: 20px
+        .iti__selected-dial-code
+            font-size: 15px
+    .footer
+        &__flex
+            flex-direction: column
+        &__item
+            min-height: 70px
+            &--col
+            &--title
+                margin: 0 auto
+                svg
+                    width: 24px
+            &--info
+                margin: 0 auto
+                margin-top: 8px
+                margin-bottom: 26px
+                
+            img
+                width: 50px 
+                height: 50px
+        &__social
+            margin: 0 auto
+            margin-top: 10px
+            a
+                margin: 0 10px
+                svg
+                    width: 30px
+                    height: 30px  
+    .modal
+        &__block
+            padding: 20px 20px
+            border-radius: 6px
+            width: 94%
+            max-width: 360px
+        &__title
+            font-size: 26px
+        &__logo
+            width: 80px
+            height: 80px
+        &__subtitle
+            font-size: 14px
+        &__input
+            font-size: 14px
+        &__textarea
+            font-size: 14px
+        &__btn
+            font-size: 14px
+            padding: 14px 0px
+            span
+                line-height: 130%
 
-// @media screen and (min-width: 480px) and (max-width: 1110px)
+@media screen and (min-width: 320px) and (max-width: 359px)
+    .review
+        &__item
+            margin: 10px 20px
+        .prev-arrow svg
+            width: 30px
+            right: -20px
+        .next-arrow svg
+            width: 30px
+            left: -20px
+    .first
+        &__title
+            margin-top: 30px
+            font-size: 23px
+        &__subtitle
+            font-size: 15px
+    .call
+        font-size: 13px
+    .menu
+        &__logo
+            img
+                width: 35px
+                height: 35px
+            &--text
+                font-size: 18px
+                margin-left: 6px
+@media screen and (min-width: 768px) and (max-width: 989px)
+    .container
+        width: 700px
+    .header
+        height: 550px
+    .menu
+        padding: 8px 0
+        &__btn
+            font-size: 10px
+            padding: 12px 12px
+        &__logo
+            &--text
+                font-size: 20px
+            img
+                width: 40px
+                height: 40px
+        &__text
+            a
+                font-size: 14px
+                &:not(last-child)   
+                    margin-right: 15px
+    .call
+        font-size: 14px
+    .first
+        &__title
+            font-size: 26px
+            margin-top: 40px
+            width: 400px    
+        &__list
+            font-size: 14px
+            li
+                padding: 2px 0
+        &__subtitle
+            font-size: 16px
+            margin-top: 26px
+        &__btn
+            font-size: 14px
+            padding: 12px 40px
+    .price
+        padding-bottom: 20px
+        &__title
+            font-size: 28px
+        &__subtitle
+            font-size: 18px
+        &__list
+            font-size: 15px
+            li
+                padding: 10px 0
+    .gallery
+        grid-gap: 10px
+        &__title
+            font-size: 28px
+        a
+            img
+                height: 170px
+        &__text
+            font-size: 11px
+            padding: 8px 10px
+    .review
+        padding: 50px 20px
+        &__title
+            font-size: 28px
+        &__item
+            height: 330px
+            margin: 10px 40px
+        &__img
+            img
+                width: 120px
+                height: 120px
+        &__name
+            font-size: 20px
+        &__text
+            font-size: 12px
+        &__slider
+            margin-top: 20px   
+            width: 700px 
+        .next-arrow
+            svg
+                width: 30px
+                left: 0px
+        .prev-arrow
+            svg
+                width: 30px
+                right: 0px
+        .slick-list
+            width: 700px
+    .accordion
+        min-height: 450px
+        &__title
+            font-size: 28px
+            margin-bottom: 35px
+    .set
+        a
+            font-size: 18px
+            &:hover
+                svg
+                    width: 40px
+                    height: 40px
+            svg
+                width: 40px
+                height: 40px
+    .contentAcc p
+        font-size: 14px
+    .send
+        &__title
+            font-size: 28px
+        &__subtitle
+            font-size: 17px
+        &__input
+            font-size: 16px
+    .footer
+        &__flex
+            flex-direction: column
+        &__item
+            min-height: 70px
+            &--col
+            &--title
+                margin: 0 auto
+                
+            &--info
+                margin: 0 auto
+                margin-top: 10px
+                margin-bottom: 20px
+                
+            img
+                width: 50px 
+                height: 50px
+        &__social
+            margin: 0 auto
+            margin-top: 10px
+            a
+                margin: 0 10px
+                svg
+                    width: 30px
+                    height: 30px  
+    .modal
+        &__block
+            padding: 20px 20px
+            border-radius: 6px
+            width: 94%
+            max-width: 360px
+        &__title
+            font-size: 26px
+        &__logo
+            width: 80px
+            height: 80px
+        &__subtitle
+            font-size: 14px
+        &__input
+            font-size: 14px
+        &__textarea
+            font-size: 14px
+        &__btn
+            font-size: 14px
+            padding: 14px 0px
+            span
+                line-height: 130%
     
+@media screen and (min-width: 990px) and (max-width: 1300px)
+    .container
+        width: 900px
+    .header
+        height: 600px
+    .menu
+        padding: 8px 0
+        &__btn
+            font-size: 10px
+            padding: 12px 12px
+        &__logo
+            &--text
+                font-size: 22px
+            img
+                width: 40px
+                height: 40px
+        &__text
+            a
+                font-size: 16px
+                &:not(last-child)   
+                    margin-right: 15px
+    .call
+        font-size: 16px
+    .first
+        &__title
+            font-size: 32px
+            margin-top: 40px
+            width: 450px    
+        &__list
+            font-size: 15px
+            li
+                padding: 4px 0
+        &__subtitle
+            font-size: 16px
+            margin-top: 26px
+        &__btn
+            font-size: 14px
+            padding: 12px 40px
+    .price
+        padding-bottom: 20px
+        &__title
+            font-size: 28px
+        &__subtitle
+            font-size: 18px
+        &__list
+            font-size: 15px
+            li
+                padding: 10px 0
+    .gallery
+        grid-gap: 10px
+        &__title
+            font-size: 28px
+        a
+            img
+                height: 170px
+        &__text
+            font-size: 11px
+            padding: 8px 10px
+    .review
+        padding: 50px 20px
+        &__title
+            font-size: 28px
+        &__item
+            height: 330px
+            margin: 10px 20px
+        &__img
+            img
+                width: 120px
+                height: 120px
+        &__name
+            font-size: 20px
+        &__text
+            font-size: 12px
+        &__slider
+            margin-top: 20px    
+        .next-arrow
+            svg
+                width: 30px
+                left: -20px
+        .prev-arrow
+            svg
+                width: 30px
+                right: -20px
+    .accordion
+        &__title
+            font-size: 28px
+            margin-bottom: 35px
+    .set
+        a
+            font-size: 20px
+            &:hover
+                svg
+                    width: 40px
+                    height: 40px
+            svg
+                width: 40px
+                height: 40px
+    .send
+        &__title
+            font-size: 28px
+        &__subtitle
+            font-size: 17px
+        &__input
+            font-size: 16px
+    .footer
+        &__item
+            min-height: 70px
+            img
+                width: 50px 
+                height: 50px
+        &__social
+            a
+                svg
+                    width: 30px
+                    height: 30px      
+    .modal
+        &__block
+            padding: 20px 20px
+            border-radius: 6px
+            width: 94%
+            max-width: 360px
+        &__title
+            font-size: 26px
+        &__logo
+            width: 80px
+            height: 80px
+        &__subtitle
+            font-size: 14px
+        &__input
+            font-size: 14px
+        &__textarea
+            font-size: 14px
+        &__btn
+            font-size: 14px
+            padding: 14px 0px
+            span
+                line-height: 130%         
 
-// @media screen and (min-width: 700px) and (max-width: 988px)
-    
-    
-// @media screen and (min-width: 989px) and (max-width: 1300px)
-    
-
-
-// @media screen and (min-width: 1200px) and (max-width: 1600px)
-    
+@media screen and (min-width: 1200px) and (max-width: 1600px)
+    .container
+        width: 1000px
+    .header
+        height: 700px
+    .menu
+        padding: 8px 0
+        &__container
+            width: 1100px
+        &__btn
+            font-size: 12px
+            padding: 12px 24px
+        &__logo
+            &--text
+                font-size: 26px
+            img
+                width: 60px
+                height: 60px
+        &__text
+            a
+                font-size: 18px
+    .call
+        font-size: 18px
+        &__menu
+    .first
+        &__title
+            font-size: 36px
+            margin-top: 60px
+        &__list
+            font-size: 18px
+            li
+                padding: 5px 0
+        &__subtitle
+            font-size: 18px
+            margin-top: 26px
+        &__btn
+            font-size: 16px
+            padding: 14px 40px
+    .price
+        padding-bottom: 20px
+        &__title
+            font-size: 32px
+        &__subtitle
+            font-size: 19px
+        &__list
+            font-size: 16px
+            li
+                padding: 10px 0
+    .gallery
+        &__title
+            font-size: 32px
+        a
+            img
+                height: 220px
+        &__text
+            font-size: 12px
+            padding: 8px 10px
+    .review
+        &__title
+            font-size: 32px
+        &__item
+            height: 400px
+        &__img
+            img
+                width: 160px
+                height: 160px
+        &__name
+            font-size: 20px
+        &__text
+            font-size: 14px
+        .next-arrow
+            svg
+                width: 40px
+                left: -30px
+        .prev-arrow
+            svg
+                width: 40px
+                right: -30px
+    .accordion
+        &__title
+            font-size: 32px
+            margin-bottom: 35px
+    .set
+        a
+            font-size: 22px
+            &:hover
+                svg
+                    width: 40px
+                    height: 40px
+            svg
+                width: 40px
+                height: 40px
+    .send
+        &__title
+            font-size: 32px
+        &__subtitle
+            font-size: 18px
+        &__input
+            font-size: 16px
+    .footer
+        &__item
+            min-height: 70px
+            img
+                width: 60px 
+                height: 60px
+        &__social
+            a
+                svg
+                    width: 30px
+                    height: 30px
+    .modal
+        &__block
+            padding: 20px 20px
+            border-radius: 6px
+            width: 94%
+            max-width: 360px
+        &__title
+            font-size: 26px
+        &__logo
+            width: 80px
+            height: 80px
+        &__subtitle
+            font-size: 14px
+        &__input
+            font-size: 14px
+        &__textarea
+            font-size: 14px
+        &__btn
+            font-size: 14px
+            padding: 14px 0px
+            span
+                line-height: 130%
