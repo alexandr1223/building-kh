@@ -8,11 +8,14 @@
         background: url('../img/bg/mobile-bg.jpg') center center/cover no-repeat
     .menu
         padding: 8px 0
+        &__small
+            font-size: 9px
         &__btn
             font-size: 10px
             padding: 12px 12px
             display: none
         &__logo
+            width: 150px
             &--text
                 font-size: 20px
             img
@@ -20,8 +23,29 @@
                 height: 40px
         &__text
             display: none
+        &__item
+            &--new
+                flex-direction: row
+                margin-top: 3px
+                a
+                    margin-bottom: 0
+                    margin-left: 6px
+                    svg
+                        width: 28px
+                        height: 28px
+            &--new1
+                margin-right: 0
+                flex-direction: column
+                a
+                    margin-bottom: 0
+                    margin-left: 0px
+        &__flex
+            flex-flow: wrap
+            width: max-content
+            justify-content: flex-end
+            width: 200px
     .call
-        font-size: 14px
+        font-size: 13px
         &__menu
             margin-bottom: 0
         &__time
@@ -639,6 +663,7 @@
             font-size: 12px
             padding: 12px 24px
         &__logo
+            width: 260px
             &--text
                 font-size: 26px
             img
@@ -647,8 +672,14 @@
         &__text
             a
                 font-size: 18px
+                &:not(last-child)    
+                   margin-right: 25px
+        &__item
+            &--new1
+                margin-right: 10px
+                   
     .call
-        font-size: 18px
+        font-size: 15px
         &__menu
     .first
         &__title
