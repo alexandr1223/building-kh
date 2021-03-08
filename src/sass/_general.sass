@@ -2,9 +2,9 @@ $red: #F93737
 $grey: #BABABA
 
 .header 
-    background: url('../img/bg/first-bg.jpg') center center/cover no-repeat
+    background: url('../img/bg/first-bg.png') center center/cover no-repeat
     height: 100vh
-    transform: 
+    min-height: 940px
 
 .menu
     background: rgba(0, 0, 0, .6)
@@ -17,8 +17,10 @@ $grey: #BABABA
             margin-left: 10px
             color: #fff
         img
-            width: 80px
-            height: 80px
+            width: 65px
+            height: 65px
+    &__tel
+        flex-wrap: wrap-reverse
     &__container
         display: flex
         justify-content: space-between
@@ -48,6 +50,8 @@ $grey: #BABABA
             padding: 12px 0 0 0
             &:not(last-child)
                 margin-right: 40px 
+            &:last-child
+                margin-right: 0
     &__btn
         position: fixed
         right: 20px
@@ -63,6 +67,8 @@ $grey: #BABABA
     display: block
     padding: 0px 0
     text-align: right
+    &__time
+        font-size: 14px
     &__footer
         align-items: center
         display: flex
@@ -76,12 +82,12 @@ $grey: #BABABA
 .first
     &__container
     &__title
-        font-size: 46px
+        font-size: 42px
         margin-top: 120px
         line-height: 125%
         text-align: left
         color: #fff
-        width: 650px
+        width: 750px
     &__subtitle
         max-width: 900px
         color: #fff 
@@ -92,7 +98,7 @@ $grey: #BABABA
     &__btn
         font-size: 18px 
         padding: 20px 40px
-        margin-top: 20px
+        margin-top: 40px
         display: block
         width: 250px
         text-align: center
@@ -173,6 +179,193 @@ $grey: #BABABA
         margin: 30px auto
         background: rgba(50,129,188,1)
 
+.numbers
+    padding: 50px 0 10px
+    &__title
+        color: #3A8ECA
+        text-transform: uppercase
+        padding-bottom: 20px
+        font-size: 36px
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 50px
+    &__item
+        &--title
+            display: flex
+            align-items: center
+            span
+                margin-left: 10px
+                font-size: 20px
+            img
+                width: 45px 
+                height: auto
+        &--text
+            font-size: 16px
+            margin-top: 14px
+            font-family: "Mont-Medium"
+            line-height: 170%
+
+.master
+    padding-top: 40px
+    padding-bottom: 50px
+    &__mobile
+        display: none
+    &__pc
+        display: block
+    &__title
+        color: #3A8ECA
+        text-transform: uppercase
+        padding-bottom: 40px
+        font-size: 30px
+    &__container
+        width: 970px
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 50px 30px
+    &__item
+        width: 460px
+        img
+            width: 460px
+        &--title
+            font-size: 26px
+            margin-bottom: 20px
+        &--text
+            font-size: 17px
+            font-family: "Mont-Regular"
+            line-height: 170%
+
+.why
+    margin-top: 70px
+    &__back
+        position: absolute
+        width: 430px
+        height: 95px
+        background: #FF7A00
+        animation: pulsar 1s infinite
+        border-radius: 50px
+        z-index: -1
+    &-sec
+        display: none
+    &__btn
+        position: relative
+        width: 430px
+        height: 95px
+        display: flex
+        align-items: center
+        background: #FF7A00
+        border-radius: 50px
+        margin: 0 auto
+        cursor: pointer
+        z-index: 10
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            width: 70%
+            left: -90%
+            background: rgba(0, 0, 0, .25)
+            height: 2px
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            width: 70%
+            right: -90%
+            background: rgba(0, 0, 0, .25)
+            height: 2px  
+        .why-first
+            position: absolute
+            width: 60px
+            height: 60px
+            animation: rotate 3s infinite 0s
+        .why-sec
+            position: absolute
+            width: 60px
+            height: 60px
+            left: 30px
+        span
+            position: absolute
+            font-size: 20px
+            left: 150px
+            width: 300px
+            color: #fff
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+        left: 20px
+    50%
+        transform: rotate(360deg) 
+        left: 80px
+    100%
+        transform: rotate(0deg)
+        left: 20px
+
+
+@keyframes pulsar
+    0% 
+        opacity: .55
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1,1)
+        animation-timing-function: linear
+    33% 
+        opacity: 0.45
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.05,1.05)
+        animation-timing-function: linear
+    66% 
+        opacity: 0.35
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.1,1.1)
+        animation-timing-function: linear
+    100% 
+        opacity: 0.1
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.1,1.1)
+.hideMob
+    display: none
+
+.quest
+    padding: 50px
+    &__title
+        color: #3A8ECA
+        margin-bottom: 50px
+        font-size: 36px
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        grid-gap: 20px
+    &__item
+        display: flex
+        flex-direction: column
+        &--title
+            font-size: 18px
+            text-align: center
+            margin-top: 20px
+        &--text
+            margin-top: 20px
+            font-size: 16px
+            font-family: "Mont-Regular"
+            text-align: center
+    &__img
+        width: 100px
+        height: auto
+        display: block
+        margin: 0 auto
+
+.video
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: rgba(0, 0, 0, .5)
+    height: 100vh
+    z-index: 200
+    opacity: 0
+    z-index: -10
+    iframe
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
 .review
     padding: 100px 0 100px 0
     background: url('../img/review.jpg') center center/cover no-repeat
@@ -209,7 +402,7 @@ $grey: #BABABA
         margin-top: 40px
     .next-arrow
         cursor: pointer
-        svg
+        img
             position: absolute
             top: 50%
             left: -50px
@@ -218,7 +411,7 @@ $grey: #BABABA
             transform: rotate(180deg) 
     .prev-arrow
         cursor: pointer
-        svg
+        img
             position: absolute
             top: 50%
             right: -50px

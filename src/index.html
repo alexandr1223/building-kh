@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/lightgallery.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/intlTelInput.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title></title>
+    <title>Поклейка всех видов обоев. Подготовка стен под обои</title>
 <body>
     <!-- <div class="preloader">
         <div class="preloader__row">
@@ -27,8 +27,8 @@
                     <div class="menu__logo">
                         <img src="img/logo.png" alt="logo">
                         <div class="menu__logo--text">
-                            Мастер <br>
-                            Харьков
+                            Profi <br>
+                            Master295
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <a href="#review">Отзывы</a>
                     <a href="#footer">Контакты</a>
                 </div>
-                <div class="menu__item">
+                <div class="menu__item menu__tel">
                     <div class="menu__item--link">
                         <img src="img/icon/lifecell.png" alt="">
                         <a href="tel:380639348875" class="call call__menu">063-93-48-875</a>
@@ -51,7 +51,9 @@
                         <img src="img/icon/vodafon.png" alt="">
                         <a href="tel:380995676207" class="call call__menu">099-56-76-207</a>
                     </div>
-                    <a href="mailto:romaboiko295@gmail.com" class="call call__menu">romaboiko295@gmail.com</a>
+                    <div class="call call__menu call__time">Работаем ежедневно с 8:00 до 22:00</div>
+                    <div class="call call__menu call__time">офис проспект Олександровский 154</div>
+                    
                 </div>
             </div>
         </nav>
@@ -62,22 +64,22 @@
 
         <section class="first">
             <div class="container first__container">
-                <div class="first__text">
-                    <h1 class="first__title title">
-                        Быстро, качественно и в строк
-                        выполним работы по внутренней отделке:
+                <div class="first__text" data-aos="fade-right">
+                    <h1 class="first__title title" >
+                        Добросовестное обслуживание и персональный подход к каждому. Поклейка всех видов обоев. Подготовка стен под обои. 
                     </h1>
-                    <ul class="first__list">
+                    <!-- <ul class="first__list">
                         <li>- поклейка обоев</li>
                         <li>- покраска стен, потолка</li>
                         <li>- поклейка и покраска багетов</li>
                         <li>- финишная шпаклевка стен и потолков</li>
-                    </ul>
-                    <div class="first__subtitle">
-                        Опыт ремонтных работ более 5 лет. <br>
-                        Умеренные цены
-                    </div>
-                    <a href="#price" class="first__btn btn">
+                    </ul> -->
+                    <!-- <div class="first__subtitle">
+                        Работем быстро, аккуратно, качественно. 
+                        <br>
+                        Опыт более 10 лет
+                    </div> -->
+                    <a href="#why" class="first__btn btn">
                        Детальнее
                     </a>
                 </div>
@@ -86,36 +88,128 @@
         </section>
     </header>
 
-    <section class="price" id="price">
+    <section class="why" data-aos="zoom-in" id="why">
+        <div class="container">
+            <div class="why__btn">
+                <div class="why__back"></div>
+                <img src="img/play-button.png" class="why-first" alt="">
+                <img src="img/play-button1.png" class="why-sec" alt="">
+                <span>Почему вы можете нам довериться?</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="video">
+        <iframe width="1100" height="550" src="https://www.youtube.com/embed/f1RlnNDy7z8?start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <section class="numbers">
+        <div class="container">
+            <h2 class="numbers__title title">
+                Коротко о нас в цифрах
+            </h2>
+            <div class="numbers__block" data-aos="fade-right"> 
+                <div class="numbers__item">
+                    <div class="numbers__item--title">
+                        <img src="img/num1.png" alt="">
+                        <span>
+                            Опыт
+                        </span>
+                    </div>
+                    <div class="numbers__item--text">
+                        У нас работают лучшие мастера с опытом работы более 7 лет
+                    </div>
+                </div>
+                <div class="numbers__item">
+                    <div class="numbers__item--title">
+                        <img src="img/num2.png" alt="">
+                        <span>
+                            Цена
+                        </span>
+                    </div>
+                    <div class="numbers__item--text">
+                        Мы предлагаем самые доступные цены на услуги мастеров - от 199 гривен
+                    </div>
+                </div>
+                <div class="numbers__item">
+                    <div class="numbers__item--title">
+                        <img src="img/num3.png" alt="">
+                        <span>
+                            Клиенты
+                        </span>
+                    </div>
+                    <div class="numbers__item--text">
+                        У нас более 1000 довольных нашими услугами клиентов
+                    </div>
+                </div>
+                <div class="numbers__item">
+                    <div class="numbers__item--title">
+                        <img src="img/num4.png" alt="">
+                        <span>
+                            Время прибытия
+                        </span>
+                    </div>
+                    <div class="numbers__item--text">
+                        При необходимости мы можем приехать к Вам на адрес в течении 1 часа
+                    </div>
+                </div>
+                <div class="numbers__item">
+                    <div class="numbers__item--title">
+                        <img src="img/num5.png" alt="">
+                        <span>
+                            Постоянное <br class="hideMob"> сотрудничество 
+                        </span>
+                    </div>
+                    <div class="numbers__item--text">
+                        Более 94% наших клиентов становятся постоянными
+                    </div>
+                </div>
+                <div class="numbers__item">
+                    <div class="numbers__item--title">
+                        <img src="img/num6.png" alt="">
+                        <span>
+                            Гарантия
+                        </span>
+                    </div>
+                    <div class="numbers__item--text">
+                        На все наши работы мы предоставляем 1 год гарантии качества
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price" id="price"  data-aos="fade-up">
         <div class="container price__container">
             <h2 class="price__title title">
                 цены
             </h2>
-            <div class="price__subtitle subtitle">
-                Цены указаны на объем от 100 м2 в новострое:
+            <div class="price__subtitle subtitle animate__fadeInUp">
+                Цены указаны на объем от 20 м2:
             </div>
             <ul class="price__list">
-                <li><span>демонтаж старых обоев</span><span class="price__num">30 грн / м2</span></li>
-                <li><span>грунтовка стен</span><span class="price__num">10 грн / м2</span></li>
-                <li><span>поклейка обоев под покраску</span><span class="price__num">55 грн / м2</span></li>
-                <li><span>покраска обоев</span><span class="price__num">60 грн / м2</span></li>
-                <li><span>поклейка виниловых обоев на флизилиновой основе, ширина 1м</span><span class="price__num">60 грн / м2</span></li>
+                <li><span>демонтаж старых обоев</span><span class="price__num">15 грн / м2</span></li>
+                <li><span>грунтовка стен</span><span class="price__num">10 грн (1-слой) / м2</span></li>
+                <li><span>поклейка обоев под покраску</span><span class="price__num">45 грн / м2</span></li>
+                <li><span>покраска бумажных обоев</span><span class="price__num">60 грн / м2</span></li>
+                <li><span>поклейка виниловых обоев на флизилиновой основе, ширина 1м</span><span class="price__num">50 грн / м2</span></li>
                 <li><span>поклейка виниловых обоев на флизилиновой основе, ширина 0,53м</span><span class="price__num">70 грн / м2</span></li>
-                <li><span>поклейка стеклообоев</span><span class="price__num">120 грн / м2</span></li>
                 <li><span>поклейка фотообоев</span><span class="price__num">120 грн / м2</span></li>
                 <li><span>поклейка стеклохолста</span><span class="price__num">70 грн / м2</span></li>
-                <li><span>шпаклевка стен под обои</span><span class="price__num">от 80 грн / м2</span></li>
-                <li><span>шпаклевка стен под покраску</span><span class="price__num">от 130 грн / м2</span></li>
+                <li><span>шпаклевка стен под обои</span><span class="price__num">50 грн / м2</span></li>
+                <li><span>шпаклевка стен под покраску</span><span class="price__num">80 грн / м2</span></li>
                 <li><span>шпаклевка потолков по бетону и гипсокартону с покраской</span><span class="price__num">от 200 грн / м2</span></li>
-                <li><span>поклейка и покаска багетов</span><span class="price__num">от 70 грн / пог.</span></li>
+                <li><span>поклейка и покаска багетов</span><span class="price__num">60 грн / пог.</span></li>
+                <li><span>укладка линолеума</span><span class="price__num">45 грн. / м2</span></li>
+                <li><span>укладка ламината</span><span class="price__num">80 грн / м2</span></li>
             </ul>
         </div>
     </section>  
     
-    <h2 class="gallery__title title" id="portfolio">
+    <h2 class="gallery__title title" id="portfolio"  data-aos="fade-up">
         Портфолио
     </h2>
-    <section class="gallery lightgallery">
+    <section class="gallery lightgallery" data-aos="fade-up">
         <h2 style="display: none;">Gallery</h2>
         <a href="img/img1.jpg">
             <img src="img/img1.jpg" alt="">
@@ -218,11 +312,59 @@
         Больше работ
     </div>
 
-    <section class="review" id="review">
-        <div class="container">
-            <div class="review__title title">
-                Отзывы
+    
+
+    <section class="master" >
+        <div class="master__container container">
+            <h2 class="master__title title">
+                Вызвать мастера по отделке - правильное решение!
+            </h2>
+            <div class="master__block" data-aos="fade-left">
+                <div class="master__item">
+                    <div class="master__item--title">
+                        Экономия на материале:
+                    </div>
+                    <div class="master__item--text">
+                        Специалисты подберут необходимое количество материалов, а также закупят их <b>централизовано и дешевле</b>. Мастера помогут сделать Вам наиболее правильный выбор касательно материалов.
+                    </div>
+                </div>
+                <div class="master__item">
+                    <img src="img/master1.jpg" alt="">
+                </div>
+                <div class="master__item master__pc">
+                    <img src="img/master2.jpg" alt="">
+                </div>
+                <div class="master__item">
+                    <div class="master__item--title">
+                        Лучший сервис:
+                    </div>
+                    <div class="master__item--text">
+                        Наши мастера действительно <b>профессионалы в своей области</b>, по этому они обсудят с вами всевозможные нюансы и варианты их решения еще на этапе подготовки к работам. Гарантируем максимально серьезный подход к вашей задаче!
+                    </div>
+                </div>
+                <div class="master__item master__mobile">
+                    <img src="img/master2.jpg" alt="">
+                </div>
+                <div class="master__item">
+                    <div class="master__item--title">
+                        Ставка на долгосрочную перспективу:
+                    </div>
+                    <div class="master__item--text">
+                        Нам очень интересно работать с клиентом в долгосрочной перспективе, по этому мы стараемся приложить все усилия для того, что бы оставить его удовлетворенным нашим сотрудничеством. <b>Мы с радостью будем обслуживать Ваше жилое/офисное помещение!</b>
+                    </div>
+                </div>
+                <div class="master__item">
+                    <img src="img/master3.jpg" alt="">
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="review" id="review" data-aos="fade-down">
+        <div class="container">
+            <h2 class="review__title title">
+                Отзывы
+            </h2>
             <div class="review__slider">
                 <div class="review__item">
                     <div class="review__img">
@@ -296,25 +438,90 @@
         </div>
     </section>
 
-    <div class="accordion">
+    <div class="quest">
+       <div class="container">
+            <h2 class="quest__title title">
+                ОСТАЛИСЬ ВОПРОСЫ?
+            </h2>
+            <div class="quest__block" >
+                <div class="quest__item">
+                    <img class="quest__img" src="img/icon/brickwall.png">
+                    <div class="quest__item--title">
+                        А один мастер сможет сделать несколько видов отделочных работ?
+                    </div>
+                    <div class="quest__item--text">
+                        Да, безусловно. Мастер-отделочник сможет: выполнить малярные работы, заняться штукатуркой, так еще и подшпаклюет, если нужно будет!)
+                    </div>
+                </div>
+                <div class="quest__item">
+                    <img class="quest__img" src="img/icon/construction-worker.png">
+                    <div class="quest__item--title">
+                        Работаете ли вы по выходным? 
+                    </div>
+                    <div class="quest__item--text">
+                        Да мы работаем без выходных
+                    </div>
+                </div>
+                <div class="quest__item">
+                    <img class="quest__img" src="img/icon/checklist.png">
+                    <div class="quest__item--title">
+                        Делаете ли вы бесплатную оценку работ?
+                    </div>
+                    <div class="quest__item--text">
+                        Замер и просчет материалов бесплатно
+                    </div>
+                </div>
+                <div class="quest__item">
+                    <img class="quest__img" src="img/icon/town.png">
+                    <div class="quest__item--title">
+                        Работаете ли вы в области?  
+                    </div>
+                    <div class="quest__item--text">
+                        Только Харьков, пригород
+                    </div>
+                </div>
+                <div class="quest__item">
+                    <img class="quest__img" src="img/icon/payment-method.png">
+                    <div class="quest__item--title">
+                        Нужна ли предоплата за работу? 
+                    </div>
+                    <div class="quest__item--text">
+                        Нет, оплата после выполнения работ
+                    </div>
+                </div>
+                
+            </div>
+       </div>
+    </div>
+
+    <!-- <div class="accordion">
         <div class="container accordion__container">
             <h2 class="title accordion__title">ОСТАЛИСЬ ВОПРОСЫ?</h2>
             <div class="set">
                 <a href="#">
-                    Работаете ли вы по выходным?
+                    А один мастер сможет сделать несколько видов отделочных работ?
                     <img src="img/icon/plus.svg" alt="" class="img-svg">
                 </a>
                 <div class="contentAcc">
-                    <p>Ответ 1</p>
+                    <p>Да, безусловно. Мастер-отделочник сможет: выполнить малярные работы, заняться штукатуркой, так еще и подшпаклюет, если нужно будет!)</p>
                 </div>
             </div>
             <div class="set">
                 <a href="#">
-                    Делаете ли вы бесплатную оценку работ?
+                    Работаете ли вы по выходным? 
                     <img src="img/icon/plus.svg" alt="" class="img-svg">
                 </a>
                 <div class="contentAcc">
-                    <p>Ответ 2</p>
+                    <p>Да мы работаем без выходных</p>
+                </div>
+            </div>
+            <div class="set">
+                <a href="#">
+                    Делаете ли вы бесплатную оценку работ? 
+                    <img src="img/icon/plus.svg" alt="" class="img-svg">
+                </a>
+                <div class="contentAcc">
+                    <p>Замер и просчет материалов бесплатен</p>
                 </div>
             </div>
             <div class="set">
@@ -323,22 +530,22 @@
                     <img src="img/icon/plus.svg" alt="" class="img-svg">
                 </a>
                 <div class="contentAcc">
-                    <p>Ответ 3</p>
+                    <p>Только Харьков, пригород</p>
                 </div>
             </div>
             <div class="set">
                 <a href="#">
-                    Нужна ли предоплата за работу?
+                    Нужна ли предоплата за работу? 
                     <img src="img/icon/plus.svg" alt="" class="img-svg">
                 </a>
                 <div class="contentAcc">
-                    <p>Ответ 4</p>
+                    <p>Нет, оплата после выполнения работ</p>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <section class="send send--footer" >
+    <section class="send send--footer">
         <div class="container">
             <h2 class="send__title title">
                 Напишите нам
@@ -351,7 +558,7 @@
                     <input type="text" required class="send__input" placeholder="Имя" name="name">
                     <input type="text" required class="send__input" name="phone">
                  </div>
-                 <textarea type="text" required class="send__textarea" name="message" placeholder="Ваше сообщение"></textarea>
+                 <textarea class="send__textarea" name="message" placeholder="Ваше сообщение"></textarea>
                  <button type="submit" class="send__btn btn">
                      <span>ОТПРАВИТЬ</span>
                  </button>
@@ -365,8 +572,8 @@
                 <div class="footer__item">
                     <img src="img/logo.png" alt="logo">
                     <div class="menu__logo--text">
-                        Мастер <br>
-                        Харьков
+                        Profi <br>
+                        Master295
                     </div>
                 </div>
                 <div class="footer__item footer__item--col">
@@ -408,6 +615,8 @@
                     </div>
                     <div class="footer__social">
                         <a href="https://www.instagram.com/romanh295/"><img src="img/icon/instagram.svg" class="img-svg" alt=""></a>
+                        <a href="viber://chat?number=0995676207"><img src="img/icon/viber.svg" class="img-svg" alt=""></a>
+                        <a href="tg://resolve?domain=romanh295"><img src="img/icon/telegram.svg" class="img-svg" alt=""></a>
                         <!-- <a href="inst"><img src="img/icon/facebook.svg" class="img-svg" alt=""></a> -->
                     </div>
                 </div>
@@ -420,7 +629,7 @@
             <div class="modal__block--logo">
                 <img src="img/logo.png" alt="" class="modal__logo">
                 <div class="modal__title title">
-                    Мастер <br> Харьков
+                    Profi <br> Master295
                 </div>
             </div>
             <div class="modal__subtitle subtitle">
@@ -438,13 +647,14 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/wow.min.js"></script>
+    
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/SmoothScroll.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/lightgallery.min.js"></script>
     <script src="js/intlTelInput.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,26 @@
 window.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    
+  
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 1500, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  
+  });
 
   $(document).ready(function(){
     $(".set > a").on("click", function(event){
@@ -24,8 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    prevArrow: "<div id='next' class='next-arrow'><img class='img-svg' src='/img/icon/right-arrow.svg'></div>",
-    nextArrow: "<div id='prev' class='prev-arrow'><img class='img-svg' src='/img/icon/right-arrow.svg'></div>",
+    prevArrow: "<div id='next' class='next-arrow'><img src='/img/icon/right-arrow.svg'></div>",
+    nextArrow: "<div id='prev' class='prev-arrow'><img src='/img/icon/right-arrow.svg'></div>",
     responsive: [
       {
         breakpoint: 989,
@@ -54,6 +76,22 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
   moreImg();
+
+  function videoOpen() {
+    document.querySelector('.why__btn').addEventListener('click', () => {
+      document.querySelector('.video').classList.add('showModal')
+    })
+  }
+  videoOpen();
+
+  function videoClose() {
+    document.querySelector('.video').addEventListener('click', (event) => {
+      if (event.target.classList.contains('video')) {
+        document.querySelector('.video').classList.remove('showModal')
+      }
+    })
+  }
+  videoClose();
 
     // window.onload = function () {
     //   document.body.classList.add('loaded_hiding');
@@ -88,7 +126,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function modalShow(btn) {
   document.querySelector(`${btn}`).addEventListener('click', () => {
-    console.log(document.querySelector('.modal'))
     document.querySelector('.modal').classList.add('showModal')
   })
 }

@@ -4,12 +4,14 @@
         padding: 0 15px
     .header
         height: 600px
+        min-height: 660px
         background: url('../img/bg/mobile-bg.jpg') center center/cover no-repeat
     .menu
         padding: 8px 0
         &__btn
             font-size: 10px
             padding: 12px 12px
+            display: none
         &__logo
             &--text
                 font-size: 20px
@@ -22,6 +24,8 @@
         font-size: 14px
         &__menu
             margin-bottom: 0
+        &__time
+            display: none
     .first
         &__title
             font-size: 26px
@@ -74,7 +78,7 @@
             font-size: 11px
             padding: 8px 10px
     .review
-        padding: 50px 20px
+        padding: 30px 20px
         background: transparent
         &__title
             font-size: 28px
@@ -95,13 +99,111 @@
         &__slider
             margin-top: 20px 
         .next-arrow
-            svg
+            img
                 width: 30px
                 left: -10px
         .prev-arrow
-            svg
+            img
                 width: 30px
                 right: -10px
+    .master
+        padding: 20px 10px
+        &__title
+            margin-bottom: 0
+            font-size: 24px
+        &__block
+            grid-gap: 20px
+            grid-template-columns: 1fr
+        &__item
+            width: 100%
+            padding: 0 20px
+            &--title
+                font-size: 20px
+                margin-bottom: 10px
+            &--text
+                font-size: 16px
+            img
+                width: 100%
+        &__pc
+            display: none
+        &__mobile
+            display: block
+    .numbers
+        width: 100% 
+        padding-bottom: 10px
+        &__item
+            width: 100%
+            padding: 0 20px
+            &--title
+                margin: 0 auto
+                width: max-content
+                span
+                    font-size: 18px
+                    display: block
+                    width: max-content
+                    margin: 10px auto 0 10px
+            &--text
+                text-align: center
+                font-size: 14px
+                width: 80%
+                margin: 10px auto
+        &__title
+            font-size: 24px
+        &__block
+            grid-template-columns: 1fr
+            grid-gap: 30px 10px
+            width: 100%
+    .hideMob
+        display: block
+    .quest
+        padding: 20px 30px 50px 30px
+        &__title
+            font-size: 24px
+        &__block
+            grid-template-columns: 1fr
+            grid-gap: 30px 0
+        &__img
+            width: 70px
+        &__item
+            &--title
+                margin-top: 10px
+            &--text
+                margin-top: 10px
+    .video
+        width: 100%
+        iframe
+            width: 100%
+            height: 200px
+    .why
+        &__btn  
+            width: 80%
+            height: 75px
+            span
+                font-size: 14px
+                width: auto
+                left: 100px
+                margin-right: 8px
+            .why-first
+                width: 40px
+                height: 40px
+            &::before
+                display: none
+            &::after
+                display: none
+        &__back
+            width: 100%
+            height: 75px
+    @keyframes rotate
+        0%
+            transform: rotate(0deg)
+            left: 20px
+        50%
+            transform: rotate(360deg) 
+            left: 55px
+        100%
+            transform: rotate(0deg)
+            left: 20px
+        
     .accordion
         min-height: 450px
         margin-top: 0
@@ -148,15 +250,24 @@
             flex-direction: column
         &__item
             min-height: 70px
+            width: max-content
+            margin: 0 auto
             &--col
+                
+                margin-bottom: 26px
+                .menu__item--link
+                    width: max-content
+                    margin: 4px auto
+                .menu__item--first
+                    margin-top: 8px
             &--title
                 margin: 0 auto
                 svg
                     width: 24px
+            
             &--info
                 margin: 0 auto
                 margin-top: 8px
-                margin-bottom: 26px
                 
             img
                 width: 50px 
@@ -196,10 +307,10 @@
     .review
         &__item
             margin: 10px 20px
-        .prev-arrow svg
+        .prev-arrow img
             width: 30px
             right: -20px
-        .next-arrow svg
+        .next-arrow img
             width: 30px
             left: -20px
     .first
@@ -295,11 +406,11 @@
             margin-top: 20px   
             width: 700px 
         .next-arrow
-            svg
+            img
                 width: 30px
                 left: 0px
         .prev-arrow
-            svg
+            img
                 width: 30px
                 right: 0px
         .slick-list
@@ -452,11 +563,11 @@
         &__slider
             margin-top: 20px    
         .next-arrow
-            svg
+            img
                 width: 30px
                 left: -20px
         .prev-arrow
-            svg
+            img
                 width: 30px
                 right: -20px
     .accordion
@@ -519,6 +630,7 @@
         width: 1000px
     .header
         height: 700px
+        min-height: 700px
     .menu
         padding: 8px 0
         &__container
@@ -585,11 +697,11 @@
         &__text
             font-size: 14px
         .next-arrow
-            svg
+            img
                 width: 40px
                 left: -30px
         .prev-arrow
-            svg
+            img
                 width: 40px
                 right: -30px
     .accordion
